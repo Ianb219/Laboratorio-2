@@ -10,4 +10,9 @@ public class NodoMatriz {
         this.valor = valor;
         this.siguiente = null;
     }
+
+    @Override
+    public String toString() {
+        return "(" + fila + "," + columna + "," + valor + ")";
+    }
 }
