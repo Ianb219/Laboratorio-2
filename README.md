@@ -1,3 +1,3 @@
 # Laboratorio-2
 # Ian David Barrios Barrios
-# Osman David Du Lo Huz Hadechiny
+# Osman David De La Hoz Hadechiny
