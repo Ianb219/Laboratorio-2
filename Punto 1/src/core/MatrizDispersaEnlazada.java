@@ -31,9 +31,9 @@ public class MatrizDispersaEnlazada {
         // Caso 1: El nodo ya existe en (fila, columna)
         if (actual != null && actual.fila == fila && actual.columna == columna) {
             if (valor == 0) { // Si el nuevo valor es 0, eliminar el nodo
-                if (anterior == null) { // El nodo a eliminar es la cabeza
+                if (anterior == null) { 
                     this.cabeza = actual.siguiente;
-                } else { // El nodo a eliminar está en medio o al final
+                } else { 
                     anterior.siguiente = actual.siguiente;
                 }
             } else { // Actualizar el valor del nodo existente
@@ -42,10 +42,10 @@ public class MatrizDispersaEnlazada {
         } else { // Caso 2: El nodo no existe, y el valor a insertar no es 0
             if (valor != 0) {
                 NodoMatriz nuevoNodo = new NodoMatriz(fila, columna, valor);
-                if (anterior == null) { // Insertar en la cabeza
+                if (anterior == null) { 
                     nuevoNodo.siguiente = this.cabeza;
                     this.cabeza = nuevoNodo;
-                } else { // Insertar después del nodo 'anterior'
+                } else {
                     nuevoNodo.siguiente = actual; // 'actual' es el nodo que va después del nuevo, o null
                     anterior.siguiente = nuevoNodo;
                 }
@@ -160,7 +160,7 @@ public class MatrizDispersaEnlazada {
             return identidad;
         }
 
-        // Crear una copia de la matriz base para las operaciones
+     
         MatrizDispersaEnlazada matrizBaseCopia = new MatrizDispersaEnlazada(dim, dim);
         NodoMatriz nodoActualOriginal = this.cabeza;
         while (nodoActualOriginal != null) {
