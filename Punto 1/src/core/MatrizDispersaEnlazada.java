@@ -1,8 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+package core;
 
 public class MatrizDispersaEnlazada {
     NodoMatriz cabeza;
@@ -60,9 +56,7 @@ public class MatrizDispersaEnlazada {
     // Método auxiliar para la multiplicación: inserta un valor o suma a un nodo existente.
     // Mantiene la lista ordenada. Si el valor resultante es 0, elimina el nodo.
     private void insertarOActualizarSuma(int fila, int columna, int valorASumar) {
-        // No hacer nada si el valor a sumar es 0 y el nodo no existe (no crearía un nuevo nodo con 0)
-        // Pero si el nodo existe, un valorASumar de 0 no cambia nada, así que podemos simplemente retornar.
-        // Sin embargo, el chequeo principal es si la suma total da 0.
+        
 
         NodoMatriz actual = this.cabeza;
         NodoMatriz anterior = null;

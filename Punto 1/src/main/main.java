@@ -1,4 +1,7 @@
+package main;
 import java.util.Scanner;
+
+import core.MatrizDispersaEnlazada;
 
 public class main { // Nombre de clase usualmente con Mayúscula inicial
 
@@ -6,26 +9,16 @@ public class main { // Nombre de clase usualmente con Mayúscula inicial
         Scanner scanner = new Scanner(System.in);
 
         // Matriz A de 2x2: A = [[1, 2], [3, 0]]
-        int dimension = 3;
+        int dimension = 2;
         MatrizDispersaEnlazada matrizA = new MatrizDispersaEnlazada(dimension, dimension);
         System.out.println("Creando Matriz A de " + dimension + "x" + dimension + " (ordenada):");
-        matrizA.insertar(0, 2, 1); // (0,0,1)
-        matrizA.insertar(1, 1, 1); // (0,0,1) -> (0,1,2)
-        matrizA.insertar(1, 2, 2);
-        matrizA.insertar(2, 0, 1);
-        matrizA.insertar(2, 2, 3);
-        
-        
-        
+        matrizA.insertar(0, 0, 1); 
+        matrizA.insertar(0, 1, 2); 
+        matrizA.insertar(1, 0, 3);
         // (0,0,1) -> (0,1,2) -> (1,0,3)
         // matrizA.insertar(1, 1, 0); // No se insertaría o eliminaría si existiera
-
-        // Aquí iría el resto de tu lógica del main, como imprimir la matriz,
-        // pedir el exponente, calcular la potencia, etc.
         System.out.print("Matriz A original: ");
         matrizA.imprimir();
-        System.out.println("--------------------------------------------------");
-
         System.out.print("Ingrese el exponente entero (x) para calcular A^x (ej. 0, 1, 2, 3,...): ");
         int exponente;
         if (scanner.hasNextInt()) {
@@ -33,7 +26,7 @@ public class main { // Nombre de clase usualmente con Mayúscula inicial
         } else {
             System.out.println("Entrada inválida para el exponente. Usando exponente 2 por defecto.");
             exponente = 2;
-            if(scanner.hasNext()) scanner.next(); // Limpiar buffer
+            if(scanner.hasNext()) scanner.next(); 
         }
 
         if (exponente < 0) {
